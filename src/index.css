@@ -1,13 +1,242 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+
+.nav_bg {
+  background-color: #fff !important;
+}
+
+.brand_title {
+  color: rgb(234, 145, 56) !important;
+}
+
+.navbar-brand {
+  font-size: 22px;
+  color: #87d35b !important;
+  font-weight: 700;
+}
+
+.brand_title:hover {
+  color: #87d35b !important;
+}
+
+.navbar-brand:hover {
+  color: rgb(234, 145, 56) !important;
+}
+
+
+.nav-item {
+  font-size: 20px;
+  padding: 7px;
+}
+
+.nav-link {
+  color: #87d35b !important;
+  font-weight: 600;
+}
+
+.nav-link:hover {
+  color: rgb(234, 145, 56) !important;
+}
+
+.active_link {
+  border-bottom: 2px solid rgb(234, 145, 56) !important;
+}
+
+.links {
+  color: #87d35b !important;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.links:hover {
+  color: rgb(234, 145, 56) !important;
+  text-decoration: underline;
+}
+
+.card_style {
+  width: 21rem;
+  margin: 50px 0;
+}
+
+.btn-outline-warning {
+  color: rgb(234, 145, 56) !important;
+  border-color: rgb(234, 145, 56) !important;
+  font-weight: 700;
+}
+
+.btn-outline-warning:hover {
+  color: #fff !important;
+  background-color: #87d35b !important;
+}
+
+.custom_title {
+  font-size: 25px;
+  font-weight: 700;
+  color: #87d35b;
+}
+
+.custom_title{
+  font-size: 45px;
+  font-weight: 700;
+  color: #87d35b;
+}
+.custom_title span{
+  color: rgb(234, 145, 56);
+}
+.card2{
+  width: 21rem;
+  margin: 50px 0;
+}
+.card_name{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.container .card2 .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #87d35b;
+
+}
+
+.container .card2 .icon .fa {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  color: #fff;
+}
+
+.container .card2 .slide {
+  width: 300px;
+  height: 200px;
+  transition: 0.5s;
+}
+
+.container .card2 .slide.slide1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transition: .7s;
+  transform: translateY(100px);
+}
+
+.container .card2:hover .slide.slide1 {
+  transform: translateY(0px);
+}
+
+.container .card2 .slide.slide2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: .8s;
+  transform: translateY(-100px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.container .card2:hover .slide.slide2 {
+  transform: translateY(0);
+}
+
+.container .card2 .slide.slide2::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  bottom: 15px;
+  left: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #87d35b;
+}
+
+.container .card2 .slide.slide2 .content p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #414141;
+}
+
+.container .card2 .slide.slide2 .content h3 {
+  margin: 0 0 10px 0;
+  padding: 0;
+  font-size: 24px;
+  text-align: center;
+  color: rgb(234, 145, 56);
+  font-weight: 700;
+}
+
+
+#hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: url("../src/images/hero-bg.jpg") top center;
+  background-size: cover;
+  position: relative;
+}
+#hero:before {
+  content: "";
+  background: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+#hero .container {
+  padding-top: 80px;
+}
+#hero h1 {
+  margin: 0;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 72px;
+  color: #124265;
+  font-family: "Poppins", sans-serif;
+}
+#hero h2 {
+  color: #5e5e5e;
+  margin: 10px 0 0 0;
+  font-size: 22px;
+}
+
+
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+@media (max-height: 800px) {
+  #hero {
+    height: auto;
+  }
+}
+@media (max-width: 992px) {
+  #hero {
+    height: auto;
+  }
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }

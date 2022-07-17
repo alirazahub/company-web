@@ -1,17 +1,46 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { createRoot } from 'react-dom/client'; //REACT DOM
+import Footer from './Components/Footer';
+import Header from './Components/Header';
+import About from './Components/About';
+import Services from './Components/Services';
+import Contact from './Components/Contact';
+import Error from './Components/Error';
+import Home from './Components/Home';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+} from "react-router-dom";
+import ProfileCard from './Components/ProfileCard';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const container = document.getElementById('root');
+const root = createRoot(container);
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+    <Router>
+        <Header />
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+        <Switch>
+            <Route exact path="/">
+                <Home />
+            </Route>
+            <Route path="/services">
+                <Services />
+            </Route>
+            <Route path="/about">
+                <About />
+            </Route>
+            <Route path="/contact">
+                <Contact />
+            </Route>
+            <Route path="/profile">
+                <ProfileCard />
+            </Route>
+            <Route>
+                <Error />
+            </Route>
+        </Switch>
+        <Footer />
+    </Router>
+);
